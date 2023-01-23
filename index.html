@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" </head>
+
+<body>
+
+    <!-- <div class="alert-box" id="alert">
+        <p id="title">알림창임</p>>
+    </div>
+    <button onclick="아이디알림창()">버튼1</button>
+    <button onclick="비밀번호알림창()">버튼2</button>
+    <!--버튼 클릭 시 아이디알림창, 비밀번호알림창 함수가 실행됨 > 스크립트태그 안의 함수가 실행되어 자바스크립트가 동작함.-->
+
+    <!-- <script>
+
+        function 아이디알림창() {
+            document.getElementById('title').innerHTML = '아이디를 입력하세요';
+            document.getElementById('alert').style.display = 'block';
+        }
+
+        function 비밀번호알림창() {
+            document.getElementById('title').innerHTML = '비밀번호를 입력하세요';
+            document.getElementById('alert').style.display = 'block';
+        } -->
+
+    <div class="alert-box" id="alert">
+        <p id="title">알림창임</p>>
+    </div>
+    <button onclick="알림창('block')">버튼1</button>
+    <button onclick="알림창('none')">버튼2</button>
+    <!--버튼 클릭 시 아이디알림창, 비밀번호알림창 함수가 실행됨 > 스크립트태그 안의 함수가 실행되어 자바스크립트가 동작함.-->
+
+    <script>
+
+        function 알림창(파라미터) {
+
+            document.getElementById('alert').style.display = 파라미터;
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
