@@ -27,9 +27,17 @@
 
     <body>
 
-        <button type="button" class="btn btn-warning">명은이의 버튼</button>
-
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <div class="black-bg">
+            <div class="white-bg">
+                <h4>로그인하세요</h4>
+                <button class="btn btn-danger" id="close">닫기</button>
+            </div>
+        </div>
+
+
+
 
         <nav class="navbar navbar-light bg-light">
             <div class="container-fluid">
@@ -48,16 +56,25 @@
             <li class="list-group-item">And a fifth one</li>
         </ul>
 
-
         <script src="https://code.jquery.com/jquery-3.6.3.min.js"
             integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 
-        <script>
-            document.getElementsByClassName('navbar-toggler')[0].addEventListener('click', function () {
 
-                document.getElementsByClassName('list-group')[0].classList.toggle('show'); //classList.add로만 작성하면 클릭시 펼쳐지나, 재클릭시 닫히지 않음. classList.toggle로 해주어야 한번 더 누르면 확장된 네비게이션바가 닫힘.
+        <button id="login">로그인</button>
+        <script>
+
+            //document.getElementById('login').addEventListener('click', function(){ -> 제이쿼리에서는 셀렉터대신 달러표시쓰고, addEventListener대신에 on 쓴다.
+            $('#login').on('click', function () {
+                //document.querySelector('.black-bg').classList.add('show-modal') //로그인 아이디를 사용하는 버튼태그 클릭시 함수문이 동작할건데, 함수문이 동작하면 .black-bg클래스에 show-modal클래스를 붙여줄거다.
+                $('.black-bg').toggleClass('show-modal');
+            })
+
+            $('#close').on('click', function () {
+                $('.black-bg').removeClass('show-modal');
+
             })
         </script>
+
 
     </body>
 
