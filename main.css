@@ -29,12 +29,17 @@
 .white-bg {
 
     background-color: beige;
-    width: 200px;
-    height: 150px;
+    width: 800px;
+    height: 400px;
     position: absolute;
 }
 
 
 .show-modal {
     display: block;
+}
+
+.main-bg {
+    padding: 100px 20px;
+    background: lightgrey;
 }
